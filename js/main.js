@@ -77,6 +77,13 @@ document.querySelectorAll('.entry button.visit[data-site]').forEach(function (bt
 var gs = document.getElementById('getStarted');
 if (gs) gs.addEventListener('click', function () { window.open('https://www.windowscanada.com/', '_blank', 'noopener'); });
 
+// CLOSING CTA button
+var cbtn = document.querySelector('.closing .cbtn[data-site]');
+if (cbtn) cbtn.addEventListener('click', function () {
+  var url = cbtn.getAttribute('data-site');
+  if (url) window.location.href = url;
+});
+
 // Jump links -> scroll to the ranking
 var rows = document.querySelector('.rows');
 document.querySelectorAll('.jump').forEach(function (el) {
